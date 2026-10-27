@@ -1,0 +1,21 @@
+# Unreal Engine: carpetas que el motor genera solo
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+
+# Sistema
+.DS_Store
+Thumbs.db
