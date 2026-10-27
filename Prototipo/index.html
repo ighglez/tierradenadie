@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tierra de Nadie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hud">
+  <div id="crosshair"></div>
+  <div id="hitmarker">✕</div>
+  <div id="prompt"></div>
+  <div id="action"><div id="action-label"></div><div class="track"><div id="action-bar"></div></div></div>
+  <div id="msgs"></div>
+  <div id="indicators"></div>
+  <div id="status">
+    <div class="st" id="st-health"><span class="ic" title="Salud">♥</span><div class="bar"><div></div></div></div>
+    <div class="st" id="st-blood"><span class="ic" title="Sangre">🩸</span><div class="bar"><div></div></div></div>
+    <div class="st" id="st-energy"><span class="ic" title="Comida">🍖</span><div class="bar"><div></div></div></div>
+    <div class="st" id="st-water"><span class="ic" title="Agua">💧</span><div class="bar"><div></div></div></div>
+    <div class="st" id="st-temp"><span class="ic" title="Temperatura">🌡</span><div class="bar"><div></div></div></div>
+  </div>
+  <div id="stamina"><div id="stamina-bar"></div></div>
+  <div id="weapon"></div>
+  <div id="compass"></div>
+  <div id="clock"></div>
+  <div id="hurt"></div>
+  <div id="ko"></div>
+</div>
+
+<div id="inventory" class="hidden"></div>
+<div id="map" class="hidden"><canvas id="map-canvas" width="760" height="760"></canvas><div class="hint">[M] cerrar mapa</div></div>
+
+<div id="menu" class="screen">
+  <div class="box">
+    <h1>TIERRA DE NADIE</h1>
+    <p class="sub">Supervivencia en mundo abierto</p>
+    <div id="loading">Generando el mundo...</div>
+    <div id="menu-buttons" class="hidden">
+      <button id="btn-continue" class="big hidden">Continuar partida</button>
+      <button id="btn-new" class="big">Nueva partida</button>
+    </div>
+    <div class="controls">
+      <div><b>WASD</b> trotar · <b>Mayús</b> esprintar · <b>Bloq Mayús</b> caminar · <b>C</b> agacharse · <b>Z</b> tumbarse · <b>Espacio</b> saltar</div>
+      <div><b>Q / E</b> asomarse · <b>Clic izq.</b> atacar/disparar · <b>Clic dcho.</b> apuntar (+ <b>Mayús</b> contener la respiración) · <b>R</b> recargar</div>
+      <div><b>1</b> arma larga · <b>2</b> pistola · <b>3</b> cuerpo a cuerpo · <b>X</b> guardar arma</div>
+      <div><b>F</b> interactuar/coger · <b>G</b> llenar botella · <b>Tab</b> inventario · <b>M</b> mapa · <b>L</b> linterna · <b>K</b> mirar brújula · <b>J</b> mirar reloj · <b>H</b> ver todos los iconos · <b>Esc</b> pausa</div>
+    </div>
+    <p class="tip">Apareces en la costa con lo puesto. Busca comida, agua y armas en los pueblos, evita a los infectados y no te desangres. Si mueres, empiezas de cero.</p>
+    <p class="legal">Juego original inspirado en el género de supervivencia. No contiene contenido de DayZ ni está afiliado a Bohemia Interactive.</p>
+  </div>
+</div>
+
+<div id="pause" class="screen hidden">
+  <div class="box">
+    <h1>PAUSA</h1>
+    <button id="btn-resume" class="big">Continuar</button>
+    <button id="btn-save-quit" class="big">Guardar y salir al menú</button>
+    <p class="tip">La partida se guarda automáticamente cada 30 segundos.</p>
+  </div>
+</div>
+
+<div id="death" class="screen hidden">
+  <div class="box">
+    <h1 class="dead">HAS MUERTO</h1>
+    <p id="death-info"></p>
+    <button id="btn-respawn" class="big">Reaparecer en la costa</button>
+  </div>
+</div>
+
+<script src="lib/three.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/gfx.js"></script>
+<script src="js/world.js"></script>
+<script src="js/items.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/player.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
